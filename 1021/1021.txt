@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+int main() {
+    int cem, cinquenta, vinte, dez, cinco, dois;
+    int um, cinquentaC, vinteCincoC, dezC, cincoC, umC;
+    double valor;
+
+    scanf("%lf", &valor);
+
+    // Converta o valor para centavos para evitar erros de precisão
+    int centavos = (int)(valor * 100 + 0.5); // Arredonda corretamente para lidar com imprecisões
+
+    // Cálculo das notas
+    cem = centavos / 10000;
+    centavos %= 10000;
+
+    cinquenta = centavos / 5000;
+    centavos %= 5000;
+
+    vinte = centavos / 2000;
+    centavos %= 2000;
+
+    dez = centavos / 1000;
+    centavos %= 1000;
+
+    cinco = centavos / 500;
+    centavos %= 500;
+
+    dois = centavos / 200;
+    centavos %= 200;
+
+    // Cálculo das moedas
+    um = centavos / 100;
+    centavos %= 100;
+
+    cinquentaC = centavos / 50;
+    centavos %= 50;
+
+    vinteCincoC = centavos / 25;
+    centavos %= 25;
+
+    dezC = centavos / 10;
+    centavos %= 10;
+
+    cincoC = centavos / 5;
+    centavos %= 5;
+
+    umC = centavos / 1;
+
+    // Impressão dos resultados
+    printf("NOTAS:\n");
+    printf("%d nota(s) de R$ 100.00\n", cem);
+    printf("%d nota(s) de R$ 50.00\n", cinquenta);
+    printf("%d nota(s) de R$ 20.00\n", vinte);
+    printf("%d nota(s) de R$ 10.00\n", dez);
+    printf("%d nota(s) de R$ 5.00\n", cinco);
+    printf("%d nota(s) de R$ 2.00\n", dois);
+    printf("MOEDAS:\n");
+    printf("%d moeda(s) de R$ 1.00\n", um);
+    printf("%d moeda(s) de R$ 0.50\n", cinquentaC);
+    printf("%d moeda(s) de R$ 0.25\n", vinteCincoC);
+    printf("%d moeda(s) de R$ 0.10\n", dezC);
+    printf("%d moeda(s) de R$ 0.05\n", cincoC);
+    printf("%d moeda(s) de R$ 0.01\n", umC);
+
+    return 0;
+}
