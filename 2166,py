@@ -1,0 +1,10 @@
+N = int(input())
+
+valor = 0.0
+
+for i in range(N):
+    valor = 1 / (2 + valor)
+
+valor += 1
+
+print(f"{valor:.10f}")
