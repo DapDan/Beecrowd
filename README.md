@@ -5,7 +5,7 @@ Repository dedicated to solving programming problems from **Beecrowd (URI Online
 The exercises cover different difficulty levels and reinforce fundamental concepts of computer science.
 
 ## Technologies
-- C
+- C, C++, Python, Java and Javascript
 - Algorithms
 - Data Structures
 - SQL
